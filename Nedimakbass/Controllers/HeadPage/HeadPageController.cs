@@ -36,6 +36,7 @@ namespace Nedimakbass.Controllers.HeadPage
         //[HttpPost]
         //public string KaydetAjax(string)
         //değişiklik deneme
+        //değişiklik2
 
     }
 }
