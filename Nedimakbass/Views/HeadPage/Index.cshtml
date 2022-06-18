@@ -1,0 +1,309 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    .f-12 {
+        font-size: 12px;
+    }
+
+    .bs {
+        border-bottom-style: groove;
+        border-bottom-color: brown;
+        border-bottom-width: 2px;
+    }
+</style>
+
+<body style="background-image: url('../../Content/Horse-PNG-Photo.png'); opacity: 0.75; background-repeat: no-repeat; background-position: center; background-size: contain; background-color: plum; ">
+
+    <div class="row container-fluid">
+        <div class="col-md-4 form-group">
+            @*1.grup*@
+            <h2 class="text-center">Giriş</h2>
+            <div class="col-md-12 form-group">
+                <label>Kullanıcı Adı</label>
+                <input id="txtUserName" class="form-control" />
+            </div>
+            <div class="col-md-12 form-group">
+                <label>Şifre</label>
+                <input id="txtPass" type="password" class="form-control" />
+            </div>
+            <div class="col-md-12 form-group">
+                <a id="btnSifreGoster" onclick="SifreGoster()" href="#">Şifreyi Göster</a>
+            </div>
+            <div class="col-md-12 form-group">
+                <button class="btn btn-group" id="btnGiris" onclick="Kaydet()">Giriş Yap</button>
+            </div>
+        </div>
+
+        <div id="kayitFormu" class="col-md-4 form-group" style="float:left">
+            @*2.grup*@
+            <h2 class="text-center">Kayıt</h2>
+
+            
+            <div class="col-md-12 form-group">
+                <div class="col-md-6 form-group">
+                    <input type="text" name="txtNameSurname" class="form-control" placeholder="Ad ve Soyad" style="float:left !important" required />
+                </div>
+                <div class="col-md-6 form-group">
+                    <input type="text" name="txtPhone" class="form-control" placeholder="Telefon" style="float:right" required />
+                </div>
+                <div class="col-md-12 form-group">
+                    <input type="email" name="txtPosta" class="form-control" placeholder="E-mail" style="max-width: initial" required />
+                </div>
+            </div>
+            <div class="col-md-12 form-group">
+                <div class="col-md-4 form-group">
+                    <input type="text" name="txtUserName" class="form-control" placeholder="Kullanıcı Adı" style="float:left" required />
+                </div>
+                <div class="col-md-4 form-group">
+                    <input type="password" name="txtPassK" class="form-control" placeholder="Şifre" required />
+                </div>
+                <div class="col-md-4 form-group">
+                    <input type="password" name="txtPassKT" class="form-control" placeholder="Ş.Tekrar" style="float:right" required />
+                </div>
+            </div>
+            <div class="col-md-12 form-group">
+                <div class="col-md-6 form-group">
+                    <input type="text" name="txtProvience" class="form-control" onclick="Uyari()" placeholder="İl" required />
+                </div>
+                <div class="col-md-6 form-group">
+                    <input type="text" name="txtDistinct" class="form-control" placeholder="İlçe" required />
+                </div>
+            </div>
+            <div class="col-md-12 form-group">
+                <div class="col-md-12"></div>
+                <textarea name="txtAdress" class="form-control" rows="4" style="min-height:86px;min-width:301px; max-height:86px; width:300px;justify-content: center; margin-left: 15px; max-width: 301px !important;" placeholder="Adres" ;required></textarea>
+            </div>
+            <div class="col-md-12 form-group">
+                <button class="btn btn-success form-control" id="btnKaydet" onclick="KayitOl()" name="btnKayit">Kayıt Ol</button>
+            </div>
+            
+        </div>
+
+        <div class="col-md-4 form-group">
+            @*3.grup*@
+            <h2 style="text-align:center">Duyurular</h2>
+            <div class="col-md-12 form-group" style="border:dotted">
+                <div class="col-md-12 bs">
+                    <div class="col-md-12 form-group f-12">
+                        <h4 style="text-align:center;font-family:'Times New Roman'"> <strong>1.Duyuru</strong></h4>
+                        <ol>
+                            <li><mark>1.yapılacaklar</mark></li>
+                            <li>2.yapılacaklar</li>
+                            <li>3.yapılacaklar</li>
+                        </ol>
+                    </div>
+                    <div class="col-md-12 form-group">
+                        <div class="col-md-4 form-group">
+                            <label style="cursor:help;text-align:center" for="outDate"><em>Yazar</em></label>
+                            <output class="form-control form-group"><span style="text-align:left">F.Tural</span></output>
+                        </div>
+                        <div class="col-md-4 form-group">
+                            <label style="cursor:help;text-align:center" for="outDate"><em>Tarih</em></label>
+                            <output class="form-control form-group"> <span style="text-align:left">21/5/22</span></output>
+                        </div>
+                        <div class="col-md-4 form-group">
+                            <label style="cursor:help;text-align:center" for="outDate"><em>Saat</em></label>
+                            <output class="form-control form-group"> <span style="text-align:left">09:05</span></output>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <hr style="height:2px;border-width:0;color:gray;background-color:gray">
+                </div>
+                <div class="col-md-12 bs">
+                    <div class="col-md-12 form-group f-12">
+                        <h4 style="text-align:center;font-family:'Times New Roman'"> <strong>2.Duyuru</strong></h4>
+                        <ol>
+                            <li><mark>1.yapılacaklar</mark></li>
+                            <li>2.yapılacaklar</li>
+                            <li>3.yapılacaklar</li>
+                        </ol>
+                    </div>
+                    <div class="col-md-12 form-group">
+                        <div class="col-md-4 form-group">
+                            <label style="cursor:help;text-align:center" for="outDate"><em>Yazar</em></label>
+                            <output class="form-control form-group"><span style="text-align:left">M.Onaç</span></output>
+                        </div>
+                        <div class="col-md-4 form-group">
+                            <label style="cursor:help;text-align:center" for="outDate"><em>Tarih</em></label>
+                            <output class="form-control form-group"> <span style="text-align:left">11/3/22</span></output>
+                        </div>
+                        <div class="col-md-4 form-group">
+                            <label style="cursor:help;text-align:center" for="outDate"><em>Saat</em></label>
+                            <output class="form-control form-group"> <span style="text-align:left">12:00</span></output>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 form-group">
+                    <h4> Assay </h4>
+                    <p style="font-weight:bold;color:black">
+                        If your website contains a lot of pages, and you want your jQuery functions to be easy to maintain, you can put your jQuery functions in a separate .js file.
+
+                        When we demonstrate jQuery in this tutorial, the functions are added directly into the
+                        section. However, sometimes it is preferable to place them in a separate file, like this (use the src attribute to refer to the .js file):
+                    </p>
+                    <div class="col-md-12 form-group">
+                        <button class="btn btn-primary" id="btnAssay">Gizle</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+
+
+
+@section Scripts{
+
+    @*<script type="text/javascript">
+            Önemli-- Alttaki yorum satırları içindir.
+        </script>*@
+
+<script type="text/javascript">
+        //Birinci yöntem
+        //$("#btnKaydet").click(function () {
+        //    alert("Butona Basıldı");
+
+        //});
+        //İkinci yöntem(neden kullanılır?: Başka butonlarda kullanılması içindir.) inputlarda da kullanılır.
+        function Kaydet() {
+            alert("Butona tıklanıldı.");
+
+        }
+        function Uyari() {
+            alert("Harf duyarı");
+        }
+        function KayitOl() {
+
+            $.ajax({
+                url: '@Url.Action("Post","Home")',
+                type: 'POST',
+                dataType: 'json',
+                data: { a: "örnek", b: true },
+                success: function (gelenveri) {
+
+                },
+                error: function (hata) {
+ d
+                }
+            });
+
+
+        }
+
+
+
+        function Getir(kelime) {
+            alert(kelime);
+        }
+
+        $(function () {
+            alert('Hoşgeldiniz');
+        });
+
+        $("#btnAssay").click(function () {
+
+            Getir("merhaba");
+
+            if ($("#btnAssay").html() == "Gizle") {
+                $("p").hide();
+                $("#btnAssay").html("Göster");
+            }
+            else {
+                /*$("p").show();*/
+                $("p").css("display", "block");
+                $("#btnAssay").html("Gizle");
+            }
+
+        });
+
+        function SifreGoster() {
+
+            if ($("#txtPass").attr("type") == "password") {
+                $("#txtPass").removeAttr("type");
+                $("#btnSifreGoster").html("Şifre Gizle");
+            }
+            else {
+                $("#txtPass").attr("type", "password");
+                $("#btnSifreGoster").html("Şifre Göster");
+            }
+        }
+
+        $("#btnSifreGoster").click(function () {
+            if ($("#txtPass").attr("type") == "password") {
+                $("#txtPass").removeAttr("type");
+                $("#btnSifreGoster").html("Şifre Gizle");
+            }
+            else {
+                $("#txtPass").attr("type", "password");
+                $("#btnSifreGoster").html("Şifre Göster");
+            }
+
+        });
+
+        //function Kaydol() {
+
+
+        //    //if ($("#txtPassK").text == $("#txtPassKT").text){
+        //    //    alert("Şifreler aynı değil!");
+        //    //}
+        //    if ($("input.toplu").txt == null) {
+        //        alert("Tüm alanların doldurulması zorunludur.");
+        //    }
+
+
+        //}
+
+        //var today = new Date()
+        //date = new Date();
+        //year = date.year();
+        //month = date.month();
+        //day = date.day();
+        ///*var date = (today.getFullYear()) + "-" + (today.getMonth() + 1) + "-" + (today.getDay());*/
+        ///*document.getElementById("outDate").innerHTML = Date(); current date  */
+        //document.getElementById("pDate").innerHTML = month + "-" + year + "-" + day;
+        function AssayHide() {
+            //if ($("p").attr("hidden") == "hidden") {
+            //    $("p").removeAttr("hidden");
+            //    $("#btnAssay").html("Gizle");
+
+
+            //}
+            //else {
+            //    $("p").attr("hidden", "hidden");
+            //    $("#btnAssay").html("Göster");
+            //}
+
+
+
+            //if ($("p").attr("hidden")=="") {
+            //    $("p").attr("hidden", "hidden");
+            //    $("#btnAssay").htmal("Göster");
+            //}
+            //else {
+            //    $("p").removeAttr("hidden");
+            //    $("#btnAssay").html("Gizle");
+            //}
+
+
+        }
+
+
+
+</script>
+}
+
+
+
+
+
+
+
+
+
+
+
