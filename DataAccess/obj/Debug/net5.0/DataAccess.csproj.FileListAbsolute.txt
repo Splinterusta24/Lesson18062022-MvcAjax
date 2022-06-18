@@ -1,0 +1,12 @@
+C:\Users\2022-01-001\Desktop\Nedimakbass\DataAccess\bin\Debug\net5.0\DataAccess.deps.json
+C:\Users\2022-01-001\Desktop\Nedimakbass\DataAccess\bin\Debug\net5.0\DataAccess.dll
+C:\Users\2022-01-001\Desktop\Nedimakbass\DataAccess\bin\Debug\net5.0\ref\DataAccess.dll
+C:\Users\2022-01-001\Desktop\Nedimakbass\DataAccess\bin\Debug\net5.0\DataAccess.pdb
+C:\Users\2022-01-001\Desktop\Nedimakbass\DataAccess\obj\Debug\net5.0\DataAccess.csproj.AssemblyReference.cache
+C:\Users\2022-01-001\Desktop\Nedimakbass\DataAccess\obj\Debug\net5.0\DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\2022-01-001\Desktop\Nedimakbass\DataAccess\obj\Debug\net5.0\DataAccess.AssemblyInfoInputs.cache
+C:\Users\2022-01-001\Desktop\Nedimakbass\DataAccess\obj\Debug\net5.0\DataAccess.AssemblyInfo.cs
+C:\Users\2022-01-001\Desktop\Nedimakbass\DataAccess\obj\Debug\net5.0\DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\2022-01-001\Desktop\Nedimakbass\DataAccess\obj\Debug\net5.0\DataAccess.dll
+C:\Users\2022-01-001\Desktop\Nedimakbass\DataAccess\obj\Debug\net5.0\ref\DataAccess.dll
+C:\Users\2022-01-001\Desktop\Nedimakbass\DataAccess\obj\Debug\net5.0\DataAccess.pdb
